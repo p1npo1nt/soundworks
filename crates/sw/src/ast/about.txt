@@ -1,0 +1,26 @@
+abstract syntax tree for SW
+when we run code in SW, it turns SW code:
+
+instrument "kick" {
+    type: drum
+    body {
+        freq: 60Hz
+        decay: 300ms
+    }
+}
+
+into nested Rust structs:
+
+DrumInstrument {
+    name: "kick".to_string(),
+    body: DrumBody {
+        freq: 60.0, 
+        decay: 300.0,
+        pitch_env: None,
+        curve: Some(EnvelopeCurve::Exponential),
+    },
+    click: None,
+    // ... other fields
+}
+
+that is what AST does
