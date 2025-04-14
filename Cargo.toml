@@ -1,6 +1,15 @@
-[package]
-name = "soundworks"
-version = "0.1.0"
-edition = "2021"
+[workspace]
+members = [
+    "crates/soundworks-cli",
+    "crates/soundworks-core",
+    "crates/soundworks-audio",
+    "crates/soundworks-dsp", "crates/sw", "dsp", "crates/sw-dsp",
+]
 
-[dependencies]
+[workspace.dependencies]
+cpal = "0.15.2"
+rodio = "0.17.1"
+nom = "7.1.3"
+fundsp = "0.15.0"
+anyhow = "1.0.75"
+thiserror = "1.0.50"
