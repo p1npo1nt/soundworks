@@ -1,4 +1,4 @@
-# Soundworks
+# 🎵 Soundworks 🎵
 
 *Work in progress*
 
